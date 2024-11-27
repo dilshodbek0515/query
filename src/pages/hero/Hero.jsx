@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Hero.scss'
-import Loading from '../../components/loading/loading'
+import Loading from '../../components/loading/Loading'
 import {
   useCreateCategoryMutation,
   useDeleteCategoryMutation,
