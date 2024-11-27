@@ -16,7 +16,7 @@ const Hero = () => {
   const [editCategory] = useEditCategoryMutation()
 
   const [formData, setFormData] = useState({
-    id: null, 
+    id: null,
     title: '',
     email: '',
     password: ''
@@ -28,14 +28,14 @@ const Hero = () => {
       editCategory(formData)
         .unwrap()
         .then(() => {
-          setFormData({ id: null, title: '', email: '', password: '' }) // Formani tozalash
+          setFormData({ id: null, title: '', email: '', password: '' })
         })
     } else {
       createCategory(formData)
         .unwrap()
         .then(() => {
           e.target.reset()
-          setFormData({ id: null, title: '', email: '', password: '' }) // Formani tozalash
+          setFormData({ id: null, title: '', email: '', password: '' })
         })
     }
   }
@@ -43,7 +43,7 @@ const Hero = () => {
   const handleEditCategory = cate => {
     setFormData({
       id: cate.id,
-      title: cate.name, // Serverdan kelgan qiymatlarni formga moslashtirish
+      title: cate.name,
       email: cate.email,
       password: cate.password
     })
@@ -69,11 +69,7 @@ const Hero = () => {
 
   return (
     <div className='hero'>
-      <form
-        onSubmit={handleCreateEditCategory}
-        className='hero_form'
-        action=''
-      >
+      <form onSubmit={handleCreateEditCategory} className='hero_form' action=''>
         <input
           type='text'
           name='title'
