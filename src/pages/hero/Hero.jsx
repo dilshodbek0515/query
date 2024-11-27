@@ -30,6 +30,7 @@ const Hero = () => {
         .then(() => {
           setFormData({ id: null, title: '', email: '', password: '' })
         })
+        .catch(err => console.log(err))
     } else {
       createCategory(formData)
         .unwrap()
@@ -37,6 +38,7 @@ const Hero = () => {
           e.target.reset()
           setFormData({ id: null, title: '', email: '', password: '' })
         })
+        .catch(err => console.log(err))
     }
   }
 
