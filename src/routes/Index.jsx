@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from '../pages/hero/Hero'
+import Hero from "../pages/hero/Hero"
 import Header from '../components/header/Header'
 import { Route, Routes } from 'react-router-dom'
 const Index = () => {
