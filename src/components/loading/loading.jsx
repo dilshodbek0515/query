@@ -1,6 +1,6 @@
 import './Loading.scss'
 
-const loading = () => {
+const Loading = () => {
   return (
     <div>
       <div class='lds-roller'>
@@ -17,4 +17,4 @@ const loading = () => {
   )
 }
 
-export default loading
+export default Loading
