@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Hero.scss'
-import Loading from '../../components/loading/Loading'
 import {
   useCreateCategoryMutation,
   useDeleteCategoryMutation,
@@ -101,11 +100,7 @@ const Hero = () => {
         </button>
       </form>
 
-      {isLoading && (
-        <p>
-          <Loading />
-        </p>
-      )}
+      {isLoading && <p>Loading ....</p>}
       <div className='cards_collection'>
         {data?.map(cate => (
           <div className='category_card' key={cate.id}>
